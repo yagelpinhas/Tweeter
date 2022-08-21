@@ -47,9 +47,45 @@ const Tweeter = function () {
         }
     }
 
+    const addComment = function(postID,commentText){
+        let comment={}
+        comment.id="c"+nextAvailableCommentId
+        nextAvailablePostId+=1
+        comment.text=commentText
+        for(let index=0;index<_posts.length;index++){
+            if(_posts[index]['id']===postID){
+                _posts[index]['comments'].push(comment)
+            }
+        }
+    }
+
+    const removeComment = function(postID,commentID){
+        let relevantPost;
+        for(let indexPost=0;indexPost<_posts.length;indexPost++){
+            if(_posts[indexPost]['id']===postID){
+              relevantPost=_posts[indexPost]
+            }
+        }
+        for(let indexComment=0;indexComment<relevantPost['comments'].length;indexComment++){
+            if(relevantPost['comments'][indexComment]['id']===commentID){
+                relevantPost['comments'].splice(indexComment,1)
+            }
+        }
+    }
+
     return {
         getPosts: getPosts,
-        addPost: addPost
+        addPost: addPost,
+        removePost: removePost,
+        addComment: addComment,
+        removeComment: removeComment
     }
 }
 
+const tweeter=Tweeter()
+tweeter.addPost("Third Tweet")
+updatesPosts=tweeter.getPosts
+console.log(updatesPosts)
+tweeter.removePost("p2")
+tweeter.addComment("p3","Seventh comment")
+tweeter.removeComment("p1","c3")
