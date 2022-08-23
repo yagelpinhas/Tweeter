@@ -11,7 +11,7 @@ const Renderer = function() {
             for(let j=0;j<currentPostComments.length;j++){
                 let currentCommentId = currentPostComments[j].id
                 let currentCommentText = currentPostComments[j].text
-                const commentDiv = $(`<div class="comment" data-id="${currentCommentId}"><h1 class="comment-text">"${currentCommentText}"</h1></div>`)
+                const commentDiv = $(`<div class="comment" data-id="${currentCommentId}"><h3 class="comment-text">"${currentCommentText}"</h3></div>`)
                 postDiv.append(commentDiv)
             }
     

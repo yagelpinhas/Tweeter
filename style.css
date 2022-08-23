@@ -55,6 +55,9 @@ body{
     font-weight: bold;
 }
 
+.comment-text{
+    color:purple;
+}
 
 .comments{
     margin-left: 10px;
