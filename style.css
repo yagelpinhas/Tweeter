@@ -76,5 +76,29 @@ body{
 
 .delete-comment{
     cursor: pointer;
-    color: #e74c3c;
+    background-color: #e74c3c;
+}
+
+.deletePost{
+    background-color: red;
+    display:inline-block;
+    position: absolute;
+    right: 70px;
+}
+
+h3{
+    display: inline-block;
+}
+.post{
+    position: relative;
+}
+.inputComment{
+    position: absolute;
+    bottom:0px;
+}
+
+.clickForComment{
+    position: absolute;
+    bottom: 0px;
+    left:180px;
 }

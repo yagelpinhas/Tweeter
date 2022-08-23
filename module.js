@@ -33,6 +33,7 @@ const Tweeter = function () {
         nextAvailablePostId+=1
         post.comments=[]
         _posts.push(post)
+        
     }
 
     const removePost = function(id){
