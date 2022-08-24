@@ -77,13 +77,16 @@ body{
 .delete-comment{
     cursor: pointer;
     background-color: #e74c3c;
+    color:white
 }
 
 .deletePost{
+    font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: red;
     display:inline-block;
     position: absolute;
     right: 70px;
+    color:white;
 }
 
 h3{
